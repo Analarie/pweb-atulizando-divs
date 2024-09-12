@@ -1,0 +1,56 @@
+/* Estilo da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Garante que as colunas tenham tamanho fixo */
+}
+
+/* Estilo das células */
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adiciona reticências ao conteúdo que ultrapassa o limite */
+    max-width: 150px; /* Limite de largura das células */
+    white-space: normal; /* Permite quebra de linha */
+    vertical-align: top;
+}
+
+/* Estilo do cabeçalho */
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Alternância de cores nas linhas */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ececec;
+}
+
+/* Estilo para as imagens */
+td img {
+    max-width: 100px; /* Limite de largura das imagens */
+    max-height: 100px; /* Limite de altura das imagens */
+    object-fit: cover; /* Faz com que as imagens se ajustem ao espaço sem distorcer */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    th, td {
+        font-size: 12px;
+        max-width: 100px;
+    }
+
+    td img {
+        max-width: 80px; /* Ajuste de tamanho de imagem em telas pequenas */
+        max-height: 80px;
+    }
+}
